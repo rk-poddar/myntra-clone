@@ -10,7 +10,7 @@ const Products = () => {
     useEffect(() => {
       dispatch(fetchProducts())
       localStorage.setItem('items', JSON.stringify(products));
-  },[products])
+  },[])
 
   return (
     <>
