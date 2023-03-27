@@ -5,7 +5,7 @@ import { fetchProducts } from '../../store/productSlice';
 
 const Products = () => {
   const dispatch = useDispatch();
-    const {data: products} = useSelector((state)=>state.product)
+  const {data: products} = useSelector((state)=>state.product)
 
     useEffect(() => {
       dispatch(fetchProducts())
@@ -16,7 +16,7 @@ const Products = () => {
     <>
       <div>
         <div className="text-banner-container">
-          <h4 class="text-banner-title">DEALS OF THE DAY</h4>
+          <h4 className="text-banner-title">DEALS OF THE DAY</h4>
         </div>
           <div className="img-link-container-1"> 
 

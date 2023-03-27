@@ -1,8 +1,27 @@
 import React from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+import {useSelector, useDispatch} from "react-redux";
+import { filterSP } from '../../store/productSlice';
 
 export const Navbar = () => {
+
+    const dispatch = useDispatch()
+    // search folter
+    const {data: products} = useSelector((state)=>state.product)
+    const [filterValue, setFilterValue] = useState(products)
+
+    const handleFilter = (e) => {
+        if(e.target.value == " "){
+            return products
+        }else{
+            const res = dispatch(filterSP(e.target.value.toLowerCase()))
+            console.log(res)
+        }
+        setFilterValue(e.target.value)
+    }
+
     return (
         <header className="header">
             <Link to="/" className="logo"><img src="https://cdn.freelogovectors.net/wp-content/uploads/2021/02/myntra-logo-freelogovectors.net_.png" alt="" /></Link>
@@ -534,10 +553,12 @@ export const Navbar = () => {
                         <input
                             type="text"
                             placeholder="Search for products, brands and more"
+                            value={filterValue}
+                            onChange={(e)=> handleFilter(e)}
                         />
                     </div>
                         
-                    <div class="nav-last">
+                    <div className="nav-last">
                     <div>
                     <a href="">
                         <img
@@ -547,19 +568,19 @@ export const Navbar = () => {
                         />
                     </a>
 
-                    <div class="dropdown">
-                        <a class="dropbtn">Profile</a>
-                        <div class="dropdown-content">
+                    <div className="dropdown">
+                        <a className="dropbtn">Profile</a>
+                        <div className="dropdown-content">
                             <h3>Welcome</h3>
                             <p>To access account and mange orders</p>
-                            <button class="btn-redirect"> <Link to="/login" class="login-btn">LOGIN / SIGNUP</Link> </button>
-                            <hr class="hr1" />
+                            <button className="btn-redirect"> <Link to="/login" className="login-btn">LOGIN / SIGNUP</Link> </button>
+                            <hr className="hr1" />
                             <a href="#">Orders</a>
                             <a href="#">Wishlist</a>
                             <a href="#">Gift Cards</a>
                             <a href="#">Contact Us</a>
-                            <a href="#">Myntra Insider <span class="new">New</span></a>
-                            <hr class="hr2" />
+                            <a href="#">Myntra Insider <span className="new">New</span></a>
+                            <hr className="hr2" />
                             <a href="#">Myntra Credit</a>
                             <a href="#">Coupons</a>
                             <a href="#">Saved Cards</a>

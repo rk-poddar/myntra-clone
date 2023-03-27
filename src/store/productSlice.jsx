@@ -11,22 +11,27 @@ const productSlice = createSlice({
     name: "cart",
     initialState: {
         data: [],
+        productData: [],
         status: STATUS.IDLE,
     },
     reducers: {
         setProducts(state, action){
             //  do not do this inside there due to pure function reducer
             // const response  = await fetch('https://api.escuelajs.co/api/v1/products');
-            state.data = action.payload;
+            state.data = action.payload; 
+            state.productData = action.payload
         },
         setStatus(state, action){
             
             state.status = action.payload;
+        },
+        filterSP(state, action){
+            state.data = state.productData.filter(product => product.category.name.toLowerCase().includes(action.payload))
         }
     }
 })
 
-export const {setProducts, setStatus} = productSlice.actions;
+export const {setProducts, setStatus, filterSP} = productSlice.actions;
 export default productSlice.reducer;
 
 // Thunks
