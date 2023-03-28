@@ -277,7 +277,8 @@ const Shoes = () => {
                             alt=""
                         /></a>
                         </div>
-                        <h6 className='text-center'>{products.category.name}</h6>
+                        <h6 className='text-center'>{products.category.name}</h6> <br />
+                        <button className='wishbtn'><span><i className="bi bi-heart"></i></span> WISHLIST</button>
                       </div>
                   ))
               }
