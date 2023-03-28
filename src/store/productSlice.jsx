@@ -8,7 +8,7 @@ export const STATUS = Object.freeze({
 })
 
 const productSlice = createSlice({
-    name: "cart",
+    name: "products",
     initialState: {
         data: [],
         productData: [],

@@ -12,6 +12,8 @@ export const Navbar = () => {
     const {data: products} = useSelector((state)=>state.product)
     const [filterValue, setFilterValue] = useState(products)
 
+    const productwishlist = useSelector(state => state.wishlist);
+
     const handleFilter = (e) => {
         if(e.target.value == " "){
             return products
@@ -576,7 +578,7 @@ export const Navbar = () => {
                             <button className="btn-redirect"> <Link to="/login" className="login-btn">LOGIN / SIGNUP</Link> </button>
                             <hr className="hr1" />
                             <a href="#">Orders</a>
-                            <a href="#">Wishlist</a>
+                            <Link to="/wishlist">Wishlist</Link>
                             <a href="#">Gift Cards</a>
                             <a href="#">Contact Us</a>
                             <a href="#">Myntra Insider <span className="new">New</span></a>
@@ -590,14 +592,15 @@ export const Navbar = () => {
                     </div>
 
                     <div>
-                    <a href="#">
+                    <Link to="/wishlist">
                         <img
                         id="svg"
                         src="https://www.svgrepo.com/show/14970/heart.svg"
                         alt=""
                         />
                         <div>Wishlist</div>
-                    </a>
+                        <span id = "cart-count-info1">{productwishlist.length}</span>
+                    </Link>
                     </div>
 
                     <div>
@@ -608,6 +611,7 @@ export const Navbar = () => {
                         alt=""
                         />
                         <div id='bag'>Bag</div>
+                        <span id = "cart-count-info2">0</span>
                     </a>
                     </div>
                 </div>

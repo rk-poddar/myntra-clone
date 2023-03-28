@@ -257,9 +257,9 @@
   .wishbtn {
     border: 1px solid rgb(189, 188, 188);
     justify-content: center;
-    height: 30px;
     cursor: pointer;
     font-weight: 500;
+    color: #ff3e6c;
   } 
   .wishbtn span {
     text-align: center;
@@ -275,68 +275,3 @@
   .wishbtn:hover{
     border-color: #282c3f;
   }
-
-  /* .wishbtn > :nth-child(2) {
-    font-size: 17px;
-  
-    /* background-color: red; */
-  /* margin-top: -25px; */
-  /* //}  */
-  
-  #wishListDiv {
-    /* visibility: hidden; */
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    margin-bottom: -5px;
-    visibility: hidden;
-    border: none;
-    position: absolute;
-    bottom: 5px;
-    text-align: center;
-    align-items: center;
-    vertical-align: middle;
-    justify-content: center;
-    z-index: 5;
-    color: lightgray;
-    border: 1px solid lightgray;
-  }
-  
-  #wishListBtn {
-    border: 1px solid lightgray;
-    text-align: center;
-    align-items: center;
-    vertical-align: middle;
-    justify-content: center;
-    width: 85%;
-    border-radius: 2px;
-    border: 1px solid #d4d5d9;
-    color: #282c3f;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 500;
-    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-      Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    margin-top: 10px;
-  }
-  #wishListBtn span {
-    text-align: center;
-    align-items: center;
-    vertical-align: middle;
-    justify-content: center;
-    margin: 0px;
-    padding: 0px;
-    font-weight: 500;
-    font-size: 15px;
-    padding: 10px;
-  }
-  
-  .wishbtn > :nth-child(2) {
-    font-size: 17px;
-  
-    /* background-color: red; */
-    /* margin-top: -25px; */
-  }
-  

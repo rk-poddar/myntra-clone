@@ -7,6 +7,7 @@ import Tshirt from './Pages/Category/Tshirt/Tshirt'
 import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 import Product from './Pages/Product/Product'
+import { WishList } from './Pages/WishList/WishList'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/shoes' element={<Shoes/>}/>
         <Route path='/tshirt' element={<Tshirt/>}/>
         <Route path='/furniture' element={<Furniture/>}/>
+        <Route path='/wishlist' element={<WishList/>} />
       </Routes>
     </div>
   )

@@ -7,6 +7,10 @@ import {useDispatch, useSelector} from "react-redux";
 import { fetchProducts } from '../../store/productSlice';
 import { useEffect } from 'react'
 import { STATUS } from '../../store/productSlice';
+import { additem } from '../../store/wishlistSlice';
+
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -39,6 +43,16 @@ const Product = () => {
             </div>
           </div>
         )
+    };
+
+    const wishlistHandler = (products) => {
+      // navigate("/cart");
+      dispatch(additem(products));
+      // Set to 3sec
+      toast.success('Added to WishList', {
+          autoClose:2000,
+          position: "bottom-right"
+      })
     };
     
   return (
@@ -285,7 +299,7 @@ const Product = () => {
                         /></a>
                         </div>
                         <h6 className='text-center'>{products.category.name}</h6> <br />
-                        <button className='wishbtn'><span><i className="bi bi-heart"></i></span> WISHLIST</button>
+                        <button onClick={() => wishlistHandler(products)} className='wishbtn btn'><span><i className="bi bi-heart"></i></span> WISHLIST</button>
                       </div>
                   ))
               }
@@ -301,6 +315,7 @@ const Product = () => {
         <div id="footerBlock"></div>
       </div>
     </div>
+    <ToastContainer/>
     </div>
   )
 }
