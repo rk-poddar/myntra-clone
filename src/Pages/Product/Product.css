@@ -8,6 +8,13 @@
     margin-top: 13vh;
   }
   
+  #ProductsParent .secondDiv{
+    margin-top: 10px;
+  }
+  #ProductsParent #filterSelectBoxes{
+    margin-top: 1px;
+  }
+  
   #ProductsParent div:nth-child(1) {
     color: #282c3f;
     font-size: 14px;

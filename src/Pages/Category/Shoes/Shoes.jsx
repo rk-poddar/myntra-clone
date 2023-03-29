@@ -54,7 +54,7 @@ const Shoes = () => {
         <div id="ProductsContainer">
       <div id="ProductsParent">
         <div>Home / ClothingMen / <span> T-Shirts</span></div>
-        <div>Men T-Shirts <span>- 100 items</span></div>
+        <div className='secondDiv'>Men T-Shirts <span>- 100 items</span></div>
         <div id="filterSelectBoxes">
           <div className="fl">FILTERS</div>
           <div className="bundel">
