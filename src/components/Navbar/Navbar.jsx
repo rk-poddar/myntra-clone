@@ -13,6 +13,7 @@ export const Navbar = () => {
     const [filterValue, setFilterValue] = useState(products)
 
     const productwishlist = useSelector(state => state.wishlist);
+    const productcart = useSelector(state => state.cart)
 
     const handleFilter = (e) => {
         if(e.target.value == " "){
@@ -604,15 +605,15 @@ export const Navbar = () => {
                     </div>
 
                     <div>
-                    <a href="#">
+                    <Link to="/bag">
                         <img
                         id="svg"
                         src="https://www.svgrepo.com/show/17522/bag.svg"
                         alt=""
                         />
                         <div id='bag'>Bag</div>
-                        <span id = "cart-count-info2">0</span>
-                    </a>
+                        <span id = "cart-count-info2">{productcart.length}</span>
+                    </Link>
                     </div>
                 </div>
     </header>
