@@ -600,7 +600,9 @@ export const Navbar = () => {
                         alt=""
                         />
                         <div>Wishlist</div>
-                        <span id = "cart-count-info1">{productwishlist.length}</span>
+                        {
+                            productwishlist.length > 0 ? <span id = "cart-count-info1">{productwishlist.length}</span> : <div></div>
+                        }
                     </Link>
                     </div>
 
@@ -612,7 +614,9 @@ export const Navbar = () => {
                         alt=""
                         />
                         <div id='bag'>Bag</div>
-                        <span id = "cart-count-info2">{productcart.length}</span>
+                        {
+                            productcart.length > 0 ? <span id = "cart-count-info2">{productcart.length}</span> : <div></div>
+                        }
                     </Link>
                     </div>
                 </div>
