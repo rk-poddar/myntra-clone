@@ -76,6 +76,11 @@ export const Cart = () => {
                                 <div>₹{price > 1000 ? (price-100) : price + (price > 499 ? 0 : 40)}</div>
                             </div>
                             <hr />
+                            {
+                                price > 1000 ? <div className='tbitem total'>
+                                    <div><span>You will save {price > 1000 ? `₹100` : `₹0`} on this order</span></div>
+                                </div> : <div></div>
+                            }
                         </div>
                         <button className='btn placebtn'>PLACE ORDER</button>
                     </div>
