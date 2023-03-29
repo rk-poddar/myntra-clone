@@ -21,12 +21,11 @@
   #ProductsParent div:nth-child(2) {
     color: #282c3f;
     font-size: 14px;
-    font-size: 16px;
-    font-weight: 500;
+    line-height: 1;
   }
   
   #ProductsParent div:nth-child(2) > span {
-    font-weight: 100;
+    font-weight: 500;
   }
   
   /* Select tag */
@@ -276,4 +275,14 @@
   .wishbtn:hover{
     border-color: #d5214b;
     background: #d5214b;
+  }
+
+  .center1{
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .center2{
+    margin-top: 0px;
+    margin-bottom: 0px;
   }

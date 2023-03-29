@@ -298,7 +298,8 @@ const Product = () => {
                             alt=""
                         /></a>
                         </div>
-                        <h6 className='text-center'>{products.category.name}</h6> <br />
+                        <h6 className='text-center center1'>{products.category.name}</h6> <br />
+                        <h6 className='text-center center2'>₹{products.price}</h6> <br />
                         <button onClick={() => wishlistHandler(products)} className='wishbtn btn'><span><i className="bi bi-heart"></i></span> WISHLIST</button>
                       </div>
                   ))
