@@ -48,7 +48,7 @@ export const Cart = () => {
                                 <h6 className='title'>₹{products.price}</h6>
                                 <button onClick={() => cartRemover(products.id)} className='btn' id='moveToBags'>Remove</button>
                             </div>
-                        )) : <div>Continue Shopping..</div>
+                        )) : <div>Continue Shopping...</div>
                         }
                     </div>
                 </div>

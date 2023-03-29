@@ -11,7 +11,6 @@ import { addcartitem } from '../../store/cartSlice';
 export const WishList = () => {
     const dispatch = useDispatch();
     const products = useSelector(state => state.wishlist);
-    console.log(products)
 
     const cartRemover = (productId) => {
         dispatch(removeitem(productId));
@@ -45,7 +44,7 @@ export const WishList = () => {
                         <button onClick={() => cartAdd(products)} className='btn' id='moveToBag'>Move To Bag</button>
                         <button onClick={() => cartRemover(products.id)} className='btn' id='moveToBag'>Remove</button>
                     </div>
-                )) : <div>Continue Shopping..</div>
+                )) : <div>Continue Shopping...</div>
                 }
             </div>
             <div id="footerEl">
