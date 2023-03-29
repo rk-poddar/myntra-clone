@@ -259,7 +259,8 @@
     justify-content: center;
     cursor: pointer;
     font-weight: 500;
-    color: #ff3e6c;
+    color: white;
+    background: #ff3e6c;
   } 
   .wishbtn span {
     text-align: center;
@@ -273,5 +274,6 @@
   }
 
   .wishbtn:hover{
-    border-color: #ff3e6c;
+    border-color: #d5214b;
+    background: #d5214b;
   }
