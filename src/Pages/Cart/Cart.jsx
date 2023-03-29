@@ -6,6 +6,7 @@ import { addcartitem, removecartitem } from '../../store/cartSlice'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Navbar } from '../../components/Navbar/Navbar';
 
 export const Cart = () => {
 
@@ -35,6 +36,7 @@ export const Cart = () => {
 
   return (
     <div>
+        <Navbar/>
         <div id="wishlistparents">
             <div id="wishlistCounts">My Cart <span>{products.length} items</span> </div>
             <div className='row'>

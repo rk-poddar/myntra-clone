@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/> */}
       <Routes>
         <Route  path='/' exact element={<Home/>}/>
         <Route  path='/product' exact element={<Product/>}/>

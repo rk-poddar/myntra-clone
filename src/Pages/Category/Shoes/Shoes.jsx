@@ -8,6 +8,7 @@ import { additem } from '../../../store/wishlistSlice';
 
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Navbar } from '../../../components/Navbar/Navbar';
 
 
 const Shoes = () => {
@@ -18,26 +19,26 @@ const Shoes = () => {
         localStorage.setItem('items', JSON.stringify(products));
     },[])
 
-    // check the status 
-    if(status === STATUS.LOADING){
-        return (
-          <div id="ProductsContainer">
-            <div id="ProductsParent">
-              <h2>Loading....</h2>
-            </div>
-          </div>
-        )
-    };
+    // // check the status 
+    // if(status === STATUS.LOADING){
+    //     return (
+    //       <div id="ProductsContainer">
+    //         <div id="ProductsParent">
+    //           <h2>Loading....</h2>
+    //         </div>
+    //       </div>
+    //     )
+    // };
 
-    if(status === STATUS.ERROR){
-        return (
-          <div id="ProductsContainer">
-            <div id="ProductsParent">
-              <h2>Something went wrong...</h2>
-            </div>
-          </div>
-        )
-    };
+    // if(status === STATUS.ERROR){
+    //     return (
+    //       <div id="ProductsContainer">
+    //         <div id="ProductsParent">
+    //           <h2>Something went wrong...</h2>
+    //         </div>
+    //       </div>
+    //     )
+    // };
 
     const wishlistHandler = (products) => {
       // navigate("/cart");
@@ -51,6 +52,7 @@ const Shoes = () => {
     
   return (
     <div>
+      <Navbar/>
         <div id="ProductsContainer">
       <div id="ProductsParent">
         <div>Home / ClothingMen / <span> T-Shirts</span></div>

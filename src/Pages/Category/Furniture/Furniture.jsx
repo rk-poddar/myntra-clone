@@ -5,6 +5,7 @@ import { fetchProducts } from '../../../store/productSlice';
 import { useEffect } from 'react'
 import { STATUS } from '../../../store/productSlice';
 import { additem } from '../../../store/wishlistSlice';
+import { Navbar } from '../../../components/Navbar/Navbar';
 
 const Furniture = () => {
   const dispatch = useDispatch();
@@ -14,26 +15,26 @@ const Furniture = () => {
         localStorage.setItem('items', JSON.stringify(products));
     },[])
 
-    // check the status 
-    if(status === STATUS.LOADING){
-        return (
-          <div id="ProductsContainer">
-            <div id="ProductsParent">
-              <h2>Loading....</h2>
-            </div>
-          </div>
-        )
-    };
+    // // check the status 
+    // if(status === STATUS.LOADING){
+    //     return (
+    //       <div id="ProductsContainer">
+    //         <div id="ProductsParent">
+    //           <h2>Loading....</h2>
+    //         </div>
+    //       </div>
+    //     )
+    // };
 
-    if(status === STATUS.ERROR){
-        return (
-          <div id="ProductsContainer">
-            <div id="ProductsParent">
-              <h2>Something went wrong...</h2>
-            </div>
-          </div>
-        )
-    };
+    // if(status === STATUS.ERROR){
+    //     return (
+    //       <div id="ProductsContainer">
+    //         <div id="ProductsParent">
+    //           <h2>Something went wrong...</h2>
+    //         </div>
+    //       </div>
+    //     )
+    // };
 
     const wishlistHandler = (products) => {
       // navigate("/cart");
@@ -47,6 +48,7 @@ const Furniture = () => {
     
   return (
     <div>
+      <Navbar/>
         <div id="ProductsContainer">
       <div id="ProductsParent">
         <div>Home / ClothingMen / <span> T-Shirts</span></div>

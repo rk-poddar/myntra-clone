@@ -5,6 +5,7 @@ import './Login.css'
 const Login = () => {
   return (
     <>
+        <Navbar/>
         <div id="container">
             <div id="o_div">
                 <div ID="img_div">

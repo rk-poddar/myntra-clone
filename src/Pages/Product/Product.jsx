@@ -11,6 +11,7 @@ import { additem } from '../../store/wishlistSlice';
 
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Navbar } from '../../components/Navbar/Navbar';
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -20,30 +21,30 @@ const Product = () => {
         
     },[])
 
-    // check the status 
-    if(status === STATUS.LOADING){
-      return (
-        <div id="ProductsContainer">
-          <div id="ProductsParent">
-          <div className='card'>
-            <h2>Loading....</h2>
-            </div>
-          </div>
-        </div>
-      )
-    };
+    // // check the status 
+    // if(status === STATUS.LOADING){
+    //   return (
+    //     <div id="ProductsContainer">
+    //       <div id="ProductsParent">
+    //       <div className='card'>
+    //         <h2>Loading....</h2>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   )
+    // };
 
-    if(status === STATUS.ERROR){
-        return (
-          <div id="ProductsContainer">
-            <div id="ProductsParent">
-            <div className='card'>
-              <h2>Something went wrong...</h2>
-              </div>
-            </div>
-          </div>
-        )
-    };
+    // if(status === STATUS.ERROR){
+    //     return (
+    //       <div id="ProductsContainer">
+    //         <div id="ProductsParent">
+    //         <div className='card'>
+    //           <h2>Something went wrong...</h2>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     )
+    // };
 
     const wishlistHandler = (products) => {
       // navigate("/cart");
@@ -57,6 +58,7 @@ const Product = () => {
     
   return (
     <div>
+      <Navbar/>
         <div id="ProductsContainer">
       <div id="ProductsParent">
         <div>Home / ClothingMen / <span> T-Shirts</span></div>

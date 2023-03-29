@@ -7,6 +7,7 @@ import {removeitem } from '../../store/wishlistSlice'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addcartitem } from '../../store/cartSlice';
+import { Navbar } from '../../components/Navbar/Navbar';
 
 export const WishList = () => {
     const dispatch = useDispatch();
@@ -31,6 +32,7 @@ export const WishList = () => {
 
   return (
     <div>
+        <Navbar/>
         <div id="wishlistparent">
             <div id="wishlistCount">My Wishlist <span>{products.length} items</span> </div>
             <div id='dcData'></div>

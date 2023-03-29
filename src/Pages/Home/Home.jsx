@@ -2,10 +2,12 @@ import React from 'react'
 import Products from '../../components/Products/Products'
 import Footer from "../../components/Footer/Footer"
 import "./Home.css"
+import { Navbar } from '../../components/Navbar/Navbar'
 
 const Home = () => {
     return (
         <>
+        <Navbar/>
         <main className='main'>
             <div id="myCarousel-indicators " className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
