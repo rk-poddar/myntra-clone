@@ -10,7 +10,7 @@ export const Navbar = () => {
     const dispatch = useDispatch()
     // search folter
     const {data: products} = useSelector((state)=>state.product)
-    const [filterValue, setFilterValue] = useState(products)
+    const [filterValue, setFilterValue] = useState("")
 
     const productwishlist = useSelector(state => state.wishlist);
     const productcart = useSelector(state => state.cart)
