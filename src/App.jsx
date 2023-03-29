@@ -16,14 +16,14 @@ function App() {
     <div className="App">
       <Navbar/>
       <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route exact path='/product' element={<Product/>}/>
-        <Route exact path='/login' element={<Login/>}/>
-        <Route exact path='/shoes' element={<Shoes/>}/>
-        <Route exact path='/tshirt' element={<Tshirt/>}/>
-        <Route exact path='/furniture' element={<Furniture/>}/>
-        <Route exact path='/wishlist' element={<WishList/>} />
-        <Route exact path='/bag' element={<Cart/>} />
+        <Route  path='/' exact element={<Home/>}/>
+        <Route  path='/product' exact element={<Product/>}/>
+        <Route  path='/login' exact element={<Login/>}/>
+        <Route  path='/shoes' exact element={<Shoes/>}/>
+        <Route  path='/tshirt' exact element={<Tshirt/>}/>
+        <Route  path='/furniture' exact element={<Furniture/>}/>
+        <Route  path='/wishlist' exact element={<WishList/>} />
+        <Route  path='/bag' exact element={<Cart/>} />
       </Routes>
     </div>
   )
