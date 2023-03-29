@@ -563,7 +563,7 @@ export const Navbar = () => {
                         
                     <div className="nav-last">
                     <div>
-                    <a href="">
+                    <a>
                         <img
                         id="svg"
                         src="https://www.svgrepo.com/show/198180/user-profile.svg"
