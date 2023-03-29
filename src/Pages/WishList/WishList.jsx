@@ -41,6 +41,7 @@ export const WishList = () => {
                     <div className='cartCard' key={products.id}>
                         <img src={products.images} alt="" />
                         <h6 className='title'>{products.category.name}</h6>
+                        <h6 className='title'>₹{products.price}</h6>
                         <button onClick={() => cartAdd(products)} className='btn' id='moveToBag'>Move To Bag</button>
                         <button onClick={() => cartRemover(products.id)} className='btn' id='moveToBag'>Remove</button>
                     </div>

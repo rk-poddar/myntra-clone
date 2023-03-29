@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import { fetchProducts } from '../../../store/productSlice';
 import { useEffect } from 'react'
 import { STATUS } from '../../../store/productSlice';
+import { additem } from '../../../store/wishlistSlice';
 
 const Furniture = () => {
   const dispatch = useDispatch();
@@ -32,6 +33,16 @@ const Furniture = () => {
             </div>
           </div>
         )
+    };
+
+    const wishlistHandler = (products) => {
+      // navigate("/cart");
+      dispatch(additem(products));
+      // Set to 3sec
+      toast.success('Added to WishList', {
+          autoClose:2000,
+          position: "bottom-right"
+      })
     };
     
   return (
@@ -277,8 +288,9 @@ const Furniture = () => {
                             alt=""
                         /></a>
                         </div>
-                        <h6 className='text-center'>{products.category.name}</h6> <br />
-                        <button className='wishbtn'><span><i className="bi bi-heart"></i></span> WISHLIST</button>
+                        <h6 className='text-center'>{products.category.name}</h6>
+                        <h6 className='text-center'>₹{products.price}</h6>
+                        <button onClick={() => wishlistHandler(products)} className='wishbtn btn'><span><i className="bi bi-heart"></i></span> WISHLIST</button>
                       </div>
                   ))
               }

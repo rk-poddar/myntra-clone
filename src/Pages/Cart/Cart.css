@@ -1,29 +1,28 @@
 
-#wishlistparent{
+#wishlistparents{
     width: 90%;
     margin: auto;
 }
-#WishListContainer{
+#WishListContainers{
     display: grid;
-    grid-template-columns: repeat(5,17.5%);
+    grid-template-columns: repeat(4,21%);
     grid-gap : 40px;
     margin-top: 30px;
-    
 }
 
-#WishListContainer #products{
+#WishListContainers #products{
     width: 100%;
     border: 1px solid rgb(221, 213, 213);
     position: relative;
 }
 
 
-#WishListContainer img{
+#WishListContainers img{
     width: 100%;
 }
 
   
-  #WishListContainer .title {
+  #WishListContainers .title {
     color: #535766;
     overflow: hidden;
     white-space: nowrap;
@@ -33,7 +32,7 @@
     margin-top: 10px;
   }
 
-  #wishlistCount{
+  #wishlistCounts{
     height: 21px;
     font-size: 18px;
     font-weight: 500;
@@ -41,18 +40,18 @@
     padding-top: 100px;
     padding-bottom:30px ;
   }
-  #wishlistCount span{
+  #wishlistCounts span{
     font-size: 16px;
     font-weight: 380;
     color: #282c3f;
     padding-left: 10px;
   }
 
-  .cartCard{
+  .cartCards{
     border: 1px solid rgba(0,0,0,.125);
   }
 
-  #moveToBag{
+  #moveToBags{
       width: 100%;
       font-weight: 700;
       color: #ff3e6c;
@@ -67,10 +66,55 @@
       border: 1px solid rgb(221, 213, 213);
   }
 
-  #moveToBag:hover{
+  #moveToBags:hover{
     border: 1px solid;
   }
 
   #footerEl{
     margin-top: 100px;
 }
+  .titem{
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 0px 0.5px rgb(208, 205, 205);
+  }
+  
+  .titem h5 {
+    color: #ff3e6c;
+    font-size: 18px;
+    padding-top: 15px;
+    margin-top: 0px;
+    padding-left: 0;
+  }
+  
+  .tbitem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+  }
+
+  .main_tbitem{
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .placebtn{
+    width: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+    background: #ff3e6c;
+    border-radius: 0%;
+  }
+
+  .tbitem span{
+    color: green;
+    font-weight: 400;
+  }
+
+  .total{
+    font-weight: bold;
+    font-size: 18px;
+  }
