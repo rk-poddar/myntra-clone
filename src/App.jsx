@@ -24,7 +24,7 @@ function App() {
         <Route  path='/tshirt' exact element={<Tshirt/>}/>
         <Route  path='/furniture' exact element={<Furniture/>}/>
         <Route  path='/wishlist' exact element={<WishList/>} />
-        {/* <Route  path='/bag' exact element={<Cart/>} /> */}
+        <Route  path='/bag' exact element={<Cart/>} />
         <Route  path='/bag' exact element={<Bag/>} />
       </Routes>
     </div>

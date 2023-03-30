@@ -12,11 +12,11 @@ const Bag = () => {
 
       if (dots.style.display === "none") {
           dots.style.display = "inline";
-          btnText.innerHTML = `Show more <i className="bi bi-chevron-down"></i>`;
+          btnText.innerHTML = `Show more <i class="bi bi-chevron-down"></i>`;
           moreText.style.display = "none";
       } else {
           dots.style.display = "none";
-          btnText.innerHTML = `Show less <i className="bi bi-chevron-up"></i>`;
+          btnText.innerHTML = `Show less <i class="bi bi-chevron-up"></i>`;
           moreText.style.display = "inline";
       }
   }
