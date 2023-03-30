@@ -9,6 +9,7 @@ import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 import Product from './Pages/Product/Product'
 import { WishList } from './Pages/WishList/WishList'
+import Bag from "./Pages/Bag/Bag"
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
         <Route  path='/tshirt' exact element={<Tshirt/>}/>
         <Route  path='/furniture' exact element={<Furniture/>}/>
         <Route  path='/wishlist' exact element={<WishList/>} />
-        <Route  path='/bag' exact element={<Cart/>} />
+        {/* <Route  path='/bag' exact element={<Cart/>} /> */}
+        <Route  path='/bag' exact element={<Bag/>} />
       </Routes>
     </div>
   )

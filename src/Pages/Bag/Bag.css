@@ -1,0 +1,339 @@
+.headers{
+    box-shadow: none;
+}
+.hr5 {
+  width: 100%;
+  margin: 1px auto;
+  color: rgb(230, 228, 228);
+}
+.nav ul {
+  list-style-type: none;
+  margin-bottom: 0px;
+}
+
+.nav ul li {
+  display: inline-block;
+  color: #696b79;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: "Whitney", Arial, Helvetica, sans-serif;
+}
+
+.nav ul li a{
+    letter-spacing: 3px;
+    margin: 0 5px 0 5px;
+    font-weight: 600;
+}
+
+.secure-logo {
+  display: flex;
+  align-items: end;
+  margin-right: 20px;
+  color: #696b79;
+}
+.secure-logo p {
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  word-spacing: 1px;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #696b79;
+}
+
+#current_step-1,
+#current_step-2,
+#current_step-3 {
+  color: rgb(43, 160, 92);
+  padding-bottom: 3px;
+  border-bottom: 2px solid rgb(43, 160, 92);
+}
+
+
+#cartContainer {
+  margin: auto;
+}
+.col-md-7{
+    border-right: 0.1px solid rgb(230, 228, 228);
+}
+
+.delivery{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.1px solid rgb(230, 228, 228);
+    padding: 16px 18px 12px;
+    border-radius: 2px;
+    margin-top: 40px;
+}
+
+.delivery_title{
+    font-size: 14px;
+}
+.delivery_title span{
+    font-weight: bold;
+}
+
+.delivery .btn{
+    border: 0.1px solid #ff3e6c;
+    background: white;
+    color: #ff3e6c;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.offers{
+    border: 0.1px solid rgb(230, 228, 228);
+    border-radius: 2px;
+    padding: 16px 18px 12px;
+}
+
+.offers_Img_title{
+    display: flex;
+    align-items: end;
+    margin-right: 20px;
+}
+
+.offers_Img_title p {
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0px;
+  }
+
+.avail_offer {
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 98%;
+    font-family: Whitney, Helvetica, Arial, sans-serif !important;
+    padding: 5px;
+  }
+  
+  .avail_offer ul li {
+    font-size: 13px;
+    list-style: circle;
+    padding-left: 15px;
+    list-style: inside;
+    font-weight: 100;
+  }
+  .avail_offer div {
+    display: flex;
+    text-align: left;
+  }
+  
+  .avail_offer img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  #more {
+    display: none;
+  }
+  
+  #showMoreOffer {
+    padding-left: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #ff3f6c;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    background-color: white;
+    margin-left: -20px;
+    text-decoration: none;
+    outline: none;
+  }
+  #showMoreOffer:hover {
+    text-decoration: underline;
+  }
+
+  .shippingtip{
+    display: flex;
+    align-items: end;
+    border: 0.1px solid rgb(230, 228, 228);
+    border-radius: 2px;
+    padding: 8px;
+  }
+  
+  .shippingtip .msg{
+    margin-left: 5px;
+    font-size: 14px;
+  }
+
+  .shippingtip span{
+    font-weight: 700;
+    color: #535766;
+  }
+
+  .couponstitle{
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #535766;
+    margin-top: 30px;
+  }
+
+  .coupons{
+    display: flex;
+    justify-content: space-between;
+  }
+    .coupons .btn{
+        border: 0.1px solid #ff3e6c;
+        background: white;
+        color: #ff3e6c;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+  .coupons_2nd{
+    display: flex;
+    align-items: center;
+  }
+
+  .coupons_2nd .applycoupons{
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .priceflex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .pricedetails{
+    font-size: 12px;
+    font-weight: 700;
+    margin: 24px 0px 16px;
+    color: #535766;
+  }
+
+  .priceblock{
+    font-size: 13px;
+  }
+
+  .priceblock span{
+    font-weight: bold;
+    color: #ff3e6c;
+  }
+
+  .priceblock .totalamount{
+    font-size: 15px;
+    font-weight: 700;
+    color: #3e4152;
+  }
+
+  .pricebtn{
+    margin-bottom: 20px;
+  }
+
+  .pricebtn .btn{
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #ff3f6c;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 2px;
+  }
+  
+  .pricebtn .btn:hover{
+    background: #d5214b;
+  }
+
+  .cpdiscount{
+    color: #ff3e6c;
+  }
+
+  .cfee, .discnt{
+    color: green;
+  }
+
+  .wishmsg{
+    color: #282c3f;
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: 700;
+  }
+
+  .wishmsg:hover{
+    color: #ff3e6c;
+    text-decoration: underline;
+  }
+
+  .coupons_2nd i{
+    font-size: 22px;
+  }
+
+  .wishflex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+  }
+  
+  .bi-chevron-right{
+    -webkit-text-stroke: 1px;
+  }
+
+  .bi-chevron-right:hover{
+    color: #ff3e6c;
+    text-decoration: underline;
+  }
+
+  .gifting {
+    display: flex;
+    background-color: #fcf1ec;
+  }
+  .Gname {
+    font-size: 12px;
+    font-weight: 600;
+    color: #535766;
+    margin: 30px 0 12px;
+  }
+  
+  .gifting img {
+    height: 100px;
+  }
+
+  .gifting p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    margin-top: 7px;
+  }
+  .gifting p {
+    background: #fff1ec;
+    font-size: 12px;
+    border-radius: 2px;
+    line-height: 20px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+  }
+  
+  .gifting .button {
+    background: #fff1ec;
+    color: #ff3e6c;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-left: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .gifting .button:hover{
+    outline: none;
+    border: 0;
+  }
+
+  

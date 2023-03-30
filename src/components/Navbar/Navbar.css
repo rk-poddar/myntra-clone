@@ -8,7 +8,6 @@
     font-family: "Whitney", "Segoe UI",
       "Roboto", Helvetica, Arial, sans-serif;
     min-height: 100vh;
-    background-color: rgb(250, 251, 253);
   }
   
   /* Navbar section */
@@ -16,7 +15,7 @@
     background: #fff;
     z-index: 10;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
-    position: fixed;
+    position: sticky;
     right: 0;
     left: 0;
     top: 0;

@@ -1,24 +1,19 @@
 #ProductsParent {
     width: 95%;
-    height: 100vh;
     margin: auto;
     font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
-    margin-top: 13vh;
+    margin-top: 3vh;
   }
   
   #ProductsParent .secondDiv{
     margin-top: 10px;
   }
-  #ProductsParent #filterSelectBoxes{
-    margin-top: 1px;
-  }
   
   #ProductsParent div:nth-child(1) {
     color: #282c3f;
     font-size: 14px;
-    line-height: 1;
   }
   
   #ProductsParent div:nth-child(1) > span {
@@ -28,7 +23,6 @@
   #ProductsParent div:nth-child(2) {
     color: #282c3f;
     font-size: 14px;
-    line-height: 1;
   }
   
   #ProductsParent div:nth-child(2) > span {
