@@ -251,6 +251,7 @@ a {
 
   .cpdiscount{
     color: #ff3e6c;
+    cursor: pointer;
   }
 
   .cfee, .discnt{
@@ -335,5 +336,218 @@ a {
     outline: none;
     border: 0;
   }
+
+  .btn:focus{
+    box-shadow: none;
+  }
+
+  .modalcupon{
+    font-size: 12px;
+    font-weight: 700;
+    color: #282c3f;
+  }
+
+  .modalfooter{
+    justify-content: space-between;
+    box-shadow: 0 -1px 12px 0 rgba(0,0,0,.15);
+    padding: 10px;
+  }
+
+  .modalbtn1{
+    width: 40%;
+    background: white !important;
+    color: #3e4152;
+    border: 0;
+    text-align: start;
+    padding: 2px 8px 0 45px;
+  }
+
+  .modalbtn2{
+    width: 60%;
+    background: #ff3e6c;
+    color: white;
+    font-weight: 600;
+    border: 0;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border-width: 0px;
+    line-height: 30px;
+  }
+
+  .modalbtn2:hover{
+    background: #d5214b;
+  }
+
+  .modalmax{
+    font-size: 12px;
+    color: #696b79;
+    font-weight: 600;
+  }
+
+  .modalvalue{
+    font-size: 14px;
+    color: #282c3f;
+    font-weight: 700;
+  }
+
+  .mainbody{
+    background: #f4f4f5;
+    padding: 0px;
+  }
+
+  .formgp{
+    background: white;
+    padding: 24px 24px 24px;
+  }
+
+  .mainoffer{
+    padding: 16px 23px 16px 24px;
+    background: white;
+    margin-bottom: 10rem;
+  }
+
+  .offercheck{
+    display: flex;
+    position: relative;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  .offercheck span{
+    margin-left: 16px;
+    padding: 8px 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 700;
+    color: #ff3f6c;
+    border: 1px dashed #ff3f6c;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+
+  .checkbox{
+    accent-color: #ff3f6c;
+    width: 16px;
+  }
+
+  .offerpara{
+    margin-left: 36px;
+  }
+
+  .offerpara1{
+    color: #282c3f;
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 12px;
+  }
+
+  .offerparacombo{
+    font-size: 14px;
+  }
+  
+  .formctrl{
+    padding: 11px 16px 11px;
+    font-size: 14px;
+    caret-color: #ff3e6c;
+    outline: none;
+    border: 0;
+    width: 80%;
+  }
+
+  .formgp2{
+    border: 1px solid rgb(230, 228, 228);
+    border-radius: 5px;
+  }
+
+  .check{
+    position: absolute;
+    top: 38px;
+    right: 40px;
+    font-size: 12px;
+    color: #ff9fb5;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .formctrl:focus{
+    box-shadow: none;
+  }
+
+
+  #descriptionDiv {
+    padding: 10px;
+    display: flex;
+    font-size: 14px;
+  }
+
+  #descriptionDiv img{
+    width: 150px;
+    height: 150px;
+  }
+  
+  #descriptionDiv select {
+    margin: 10px 10px 10px 0px;
+    border: none;
+    background-color: rgb(230, 225, 225);
+    padding: 3px;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+
+  #descriptionDiv select:focus {
+    border: 0;
+    outline: 0;
+  }  
+
+  .branding{
+    padding-left: 12px;
+  }
+
+  .branding .brandname{
+    font-weight: 600;
+  }
+
+  .title2{
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 62%;
+    display: inline;
+    color: #94969f;
+  }
+
+  .line-through{
+    padding: 0px 6px;
+  }
+
+  .span1{
+    color: #f16565;
+  }
+
+  .return{
+    display: inline-flex;
+    font-size: 12px;
+    padding-top: 8px;
+  }
+  
+  .span3{
+    font-weight: 700;
+    
+  }
+
+  .returntitle{
+    margin-left: 6px;
+  }
+
+  .itemremove{
+    position: absolute;
+    right: 6%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ff3f6c;
+  }
+
 
   

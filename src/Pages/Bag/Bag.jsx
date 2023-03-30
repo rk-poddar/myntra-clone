@@ -1,8 +1,53 @@
 import React from 'react'
 import './Bag.css'
 import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
+import { addcartitem, removecartitem } from '../../store/cartSlice'
+import { useSelector, useDispatch } from "react-redux";
 
 const Bag = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [price, setPrice] = useState(0);
+  const [discprice, setDiscPrice] = useState(0);
+
+    const dispatch = useDispatch();
+    const products = useSelector(state => state.cart);
+    const cartRemover = (productId) => {
+        dispatch(removecartitem(productId));
+        toast.success('Item remove successfully', {
+          autoClose: 2000,
+          position: "bottom-right"
+        })
+    };
+
+    const total = () => {
+        let price = 0;
+        products.map((product, index) => {
+            price = product.price + price
+        })
+        setPrice(price)
+    }
+
+    const discount = () => {
+      let disc = 0;
+      products.map((products, index) => {
+        disc = (1000 - products.price) + disc
+      })
+      setDiscPrice(disc)
+    }
+
+    useEffect(()=>{
+        total()
+        discount()
+    },[total])
 
   // offer section show or hide
   function showMore() {
@@ -12,11 +57,11 @@ const Bag = () => {
 
       if (dots.style.display === "none") {
           dots.style.display = "inline";
-          btnText.innerHTML = `Show more <i class="bi bi-chevron-down"></i>`;
+          btnText.innerHTML = `Show more <i className="bi bi-chevron-down"></i>`;
           moreText.style.display = "none";
       } else {
           dots.style.display = "none";
-          btnText.innerHTML = `Show less <i class="bi bi-chevron-up"></i>`;
+          btnText.innerHTML = `Show less <i className="bi bi-chevron-up"></i>`;
           moreText.style.display = "inline";
       }
   }
@@ -59,6 +104,7 @@ const Bag = () => {
       </div>
       <hr className="hr5" />
 
+      { products.length > 0 ? <div>
       <div className="row container" id='cartContainer'>
         <div className="col-md-7 col-12">
           <div className='delivery'>
@@ -102,9 +148,54 @@ const Bag = () => {
               <div className='msg'>Yay! <span> No convenience fee </span> on this order.</div>
             </div>
           </div>
-          
-          <div id='descriptionDiv'>
-            <dir className='text-center my-3'>Products Section</dir>
+          <div>
+            {
+              products.map((products, index) => {
+              return (
+                  <div className='shippingtip mt-3' key={products.id}>
+                    <div id='descriptionDiv'>
+                    <i className="bi bi-x-circle itemremove" onClick={() => cartRemover(products.id)}></i>
+                      <div>
+                        <img src={products.images} alt="" />
+                      </div>
+                      <div className='branding'>
+                        <div className="brandname">{products.category.name}</div>
+                        <div className='title'>{products.title}</div>
+                        <div className='title2'>Sold by: U.S. Polo Assn. Pvt. Ltd.</div>
+                        <div id="selectDiv">
+                          <select name="size" id="size">
+                            <option value="S">SIZE: S</option>
+                            <option value="M">SIZE: M</option>
+                            <option value="L">SIZE: L</option>
+                            <option value="Xl">SIZE: XL</option>
+                            <option value="XXl">SIZE: XXL</option>
+                          </select>
+                          <select name="quantity" id="quantity">
+                            <option value="1">Qty: 1</option>
+                            <option value="2">Qty: 2</option>
+                            <option value="3">Qty: 3</option>
+                            <option value="4">Qty: 4</option>
+                            <option value="5">Qty: 5</option>
+                            <option value="6">Qty: 6</option>
+                            <option value="7">Qty: 7</option>
+                            <option value="8">Qty: 8</option>
+                            <option value="9">Qty: 9</option>
+                            <option value="10">Qty: 10</option>
+                          </select>
+                        </div>
+                        <div className="price">
+                          <span>₹{products.price}</span> <del className="line-through">₹1000</del> <span className="discount span1">{(100-((products.price * 100 )/1000)).toFixed(2)}% OFF</span>
+                        </div>
+                        <div className='return'>
+                          <div><i className="bi bi-arrow-clockwise"></i></div>
+                          <div className='returntitle'><span className='span3'> 14 days </span> return available </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })
+            }
           </div>
           
           <div>
@@ -129,7 +220,51 @@ const Bag = () => {
                     <i className="bi bi-tag"></i>
                     <div className='applycoupons'>Apply Coupons</div>
                   </div>
-                  <button className='btn'>Apply</button>
+                  <button className='btn' onClick={handleShow}>Apply</button>
+                  <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                      <Modal.Title className='modalcupon'>APPLY COUPON</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body className='mainbody'>
+                      <Form className='mainform'>
+                        <Form.Group className="mb-3 formgp" controlId="exampleForm.ControlInput1">
+                          <div className='formgp2'>
+                            <Form.Control
+                              type="email"
+                              placeholder="Enter coupon code"
+                              autoFocus
+                              className='formctrl'
+                            />
+                            <div className='check'>CHECK</div>
+                          </div>
+                        </Form.Group>
+                      </Form>
+                      <div className='mainoffer'>
+                        <div>
+                            <div className='offercheck'>
+                              <input type="checkbox" className='checkbox'/>
+                              <span>BONANZANEW</span>
+                            </div>
+                            <div className='offerpara'>
+                              <div className='offerpara1'>Save <span>₹333</span></div>
+                              <div className='offerparacombo'>
+                                <div>Rs. 333 off on minimum purchase of 1499.</div>
+                                <div>Expires on: 30th July 2023 | 11:59 AM</div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </Modal.Body>
+                    <Modal.Footer className='modalfooter'>
+                      <Button  onClick={handleClose} className='modalbtn1'>
+                        <div className='modalmax'>Maximum savings:</div>
+                        <div className='modalvalue'>₹399</div>
+                      </Button>
+                      <Button onClick={handleClose} className='modalbtn2'>
+                        APPLY
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
                 </div>
                 <hr />
 
@@ -145,28 +280,30 @@ const Bag = () => {
                 <hr />
 
                 <div>
-                  <div className='pricedetails'>PRICE DETAILS (1 item)</div>
+                  <div className='pricedetails'>PRICE DETAILS ({products.length} item)</div>
                   <div className='priceblock'>
                     <div className='priceflex'>
                       <div>Total MRP</div>
-                      <div>₹1090</div>
+                      <div>₹{price}</div>
                     </div>
                     <div className='priceflex'>
                       <div>Discount on MRP</div>
-                      <div className='discnt'>- ₹100</div>
+                      <div className='discnt'>– ₹{discprice}</div>
                     </div>
                     <div className='priceflex'>
                       <div>Coupon Discount</div>
-                      <div className='cpdiscount'>Apply Coupon</div>
+                      <div className='cpdiscount' onClick={handleShow}>Apply Coupon</div>
                     </div>
                     <div className='priceflex'>
                       <div>Convenience Fee <span>Know More</span></div>
-                      <div className='cfee'>Free</div>
+                      <div className='cfee'>{price > 499 ? `Free` : `₹40`}</div>
                     </div>
                     <hr />
                     <div className='priceflex'>
                       <div className='totalamount'>Total Amount</div>
-                      <div className='totalamount'>₹2000</div>
+                      {
+                       products.length > 0 ? <div className='totalamount'>₹{price > 499 ? price : (price + 40)}</div> : <div className='totalamount'>₹{price}</div>
+                      }
                     </div>
                   </div>
                 </div>
@@ -179,6 +316,8 @@ const Bag = () => {
           </div>
         </div>
       </div>
+
+      </div> : <div>Continue shopping...</div> } 
     </div>
   )
 }
