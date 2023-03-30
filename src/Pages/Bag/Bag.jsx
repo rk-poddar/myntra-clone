@@ -164,11 +164,11 @@ const Bag = () => {
                         <div className='title2'>Sold by: U.S. Polo Assn. Pvt. Ltd.</div>
                         <div id="selectDiv">
                           <select name="size" id="size">
-                            <option value="S">SIZE: S</option>
-                            <option value="M">SIZE: M</option>
-                            <option value="L">SIZE: L</option>
-                            <option value="Xl">SIZE: XL</option>
-                            <option value="XXl">SIZE: XXL</option>
+                            <option value="S">Size: S</option>
+                            <option value="M">Size: M</option>
+                            <option value="L">Size: L</option>
+                            <option value="Xl">Size: XL</option>
+                            <option value="XXl">Size: XXL</option>
                           </select>
                           <select name="quantity" id="quantity">
                             <option value="1">Qty: 1</option>

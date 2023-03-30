@@ -7,6 +7,9 @@ import { STATUS } from '../../../store/productSlice';
 import { additem } from '../../../store/wishlistSlice';
 import { Navbar } from '../../../components/Navbar/Navbar';
 
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Furniture = () => {
   const dispatch = useDispatch();
     const {data: products, status} = useSelector((state)=>state.product)
@@ -308,6 +311,7 @@ const Furniture = () => {
         <div id="footerBlock"></div>
       </div>
     </div>
+    <ToastContainer/>
     </div>
   )
 }
