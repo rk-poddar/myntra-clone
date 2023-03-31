@@ -1,13 +1,13 @@
 import React from 'react'
 import './BagEmpty.css'
-import '../assets/cart.png'
+import cart from '../assets/cart.png'
 import { Link } from "react-router-dom";
 
 const BagEmpty = () => {
   return (
     <div>
         <div className='emptycart'>
-            <img src="https://constant.myntassets.com/checkout/assets/img/empty-bag.webp" alt="img" />
+            <img src={cart} alt="img" />
             <h3>Hey, it feels so light !</h3>
             <p>There is nothing in your bag. Let's add some items.</p>
             <Link to="/wishlist">
