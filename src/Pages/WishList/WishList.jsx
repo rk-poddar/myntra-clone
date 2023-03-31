@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addcartitem } from '../../store/cartSlice';
 import { Navbar } from '../../components/Navbar/Navbar';
+import {WishlistEmpty} from '../../utils/WishlistEmpty'
 
 export const WishList = () => {
     const dispatch = useDispatch();
@@ -33,12 +34,13 @@ export const WishList = () => {
   return (
     <div>
         <Navbar/>
+        {products.length >0 ? <div>
         <div id="wishlistparent">
             <div id="wishlistCount">My Wishlist <span>{products.length} items</span> </div>
             <div id='dcData'></div>
             <div id="WishListContainer">
                 {
-                products.length > 0 ? products.map((products) => (
+                products.map((products) => (
                     <div className='cartCard' key={products.id}>
                         <img src={products.images} alt="" />
                         <h6 className='title'>{products.category.name}</h6>
@@ -46,13 +48,15 @@ export const WishList = () => {
                         <button onClick={() => cartAdd(products)} className='btn' id='moveToBag'>Move To Bag</button>
                         <button onClick={() => cartRemover(products.id)} className='btn' id='moveToBag'>Remove</button>
                     </div>
-                )) : <div>Continue Shopping...</div>
+                ))
                 }
             </div>
             <div id="footerEl">
                 <Footer/>
             </div>
         </div>
+        </div> : <WishlistEmpty/>
+        }
         <ToastContainer />
     </div>
   )

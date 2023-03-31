@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import { addcartitem, removecartitem } from '../../store/cartSlice'
 import { useSelector, useDispatch } from "react-redux";
+import BagEmpty from '../../utils/BagEmpty';
 
 const Bag = () => {
 
@@ -317,7 +318,7 @@ const Bag = () => {
         </div>
       </div>
 
-      </div> : <div>Continue shopping...</div> } 
+      </div> : <BagEmpty/> } 
     </div>
   )
 }

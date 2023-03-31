@@ -1,0 +1,47 @@
+#mountroot{
+    min-height:750px;
+    margin-top:-2px"
+}
+
+.wishlistEmpty-container {
+    max-width: 980px;
+    margin: 180px auto 180px;
+    text-align: center;
+}
+
+.wishlistEmpty-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #282c3f;
+}
+
+.wishlistEmpty-info {
+    font-size: 16px;
+    color: #94989f;
+    max-width: 380px;
+    margin: 20px auto 0;
+}
+
+.wishlistEmpty-icon {
+    margin: 40px 0 40px;
+    display: inline-block;
+}
+
+.wishlistEmpty-icon img {
+    width: 120px;
+}
+
+.wishlistEmpty-button {
+    border: 1px solid #3466e8;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 50px;
+    color: #3466e8;
+    cursor: pointer;
+    display: inline-block;
+}
+
+a:hover{
+    text-decoration: none;
+}
