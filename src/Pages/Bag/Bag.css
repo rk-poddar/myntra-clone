@@ -362,6 +362,10 @@ a {
     padding: 2px 8px 0 45px;
   }
 
+  .modalbtn1:disabled div{
+    color: black;
+  }
+
   .modalbtn2{
     width: 60%;
     background: #ff3e6c;

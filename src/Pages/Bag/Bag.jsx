@@ -247,9 +247,9 @@ const Bag = () => {
                               <span>BONANZANEW</span>
                             </div>
                             <div className='offerpara'>
-                              <div className='offerpara1'>Save <span>₹333</span></div>
+                              <div className='offerpara1'>Save <span>₹399</span></div>
                               <div className='offerparacombo'>
-                                <div>Rs. 333 off on minimum purchase of 1499.</div>
+                                <div>Rs. 399 off on minimum purchase of 1499.</div>
                                 <div>Expires on: 30th July 2023 | 11:59 AM</div>
                               </div>
                             </div>
@@ -257,7 +257,7 @@ const Bag = () => {
                       </div>
                     </Modal.Body>
                     <Modal.Footer className='modalfooter'>
-                      <Button  onClick={handleClose} className='modalbtn1'>
+                      <Button className='modalbtn1' disabled>
                         <div className='modalmax'>Maximum savings:</div>
                         <div className='modalvalue'>₹399</div>
                       </Button>
