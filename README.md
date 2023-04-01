@@ -2,7 +2,7 @@
 This project is a clone of the Myntra website built using React. The purpose of this project is to demonstrate the ability to create a clone of a popular e-commerce website using React.
 
 ## Installation
-Clone the repository: <pre>`git clone https://github.com/your-username/myntra-clone.git`</pre>
+Clone the repository: <pre>`git clone https://github.com/rk-poddar/myntra-clone.git`</pre>
 Navigate to the project directory: <pre>`cd myntra-clone`</pre>
 Install dependencies: <pre>`npm install`</pre>
 Start the development server: <pre>`npm run dev`</pre>
