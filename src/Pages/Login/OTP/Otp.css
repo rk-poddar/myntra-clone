@@ -1,0 +1,112 @@
+.maindiv{
+    background-color:rgb(253,239,236);
+    padding: 50px;
+}
+
+#mainContent {
+    padding-top: 0!important;
+}
+
+#mainContent {
+    margin: 28px auto 0;
+    max-width: 400px;
+    background-color: #fff;
+}
+
+.verificationContainer {
+    width: 100%;
+    padding: 60px;
+    color: #282c3f;
+}
+
+.otpTopImage .image {
+    width: 90px;
+    height: 90px;
+}
+
+.img-responsive{
+    width: 100%;
+}
+
+.image {
+    width: 90px;
+    height: 90px;
+}
+
+.mobContainer {
+    padding-left: 50px;
+}
+
+.mobContainer h3 {
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mobContainer h4 {
+    font-weight: 400;
+    font-size: 12px;
+    opacity: .7;
+    padding: 0;
+}
+
+.otpContainer {
+    margin-top: 40px;
+}
+
+.otpContainer input {
+    padding: 9px 0;
+    border: 1px solid #d4d5d9;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 16px 0 0;
+    width: 30px;
+    border-radius: 2px;
+}
+
+.otpContainer input[type=tel]:focus {
+  border: 1px solid #555;
+}
+
+.otpContainer input:focus{
+    outline: 0;
+}
+
+input {
+    caret-color: #ff2459;
+}
+
+.resendContainer {
+    padding: 0;
+    border: none;
+    color: #ff3f6c;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.bottomlink{
+    padding-left: 40px;
+    padding-bottom: 50px;
+}
+
+.bottomeLink {
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.bottomeLink a, .bottomeLink span {
+    font-weight: 600;
+    color: #ff3f6c;
+}
+
+.LazyLoad{
+    height: auto;
+    width: 100%;
+    background: rgb(255, 237, 243);
+}

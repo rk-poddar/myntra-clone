@@ -10,6 +10,7 @@ import Login from './Pages/Login/Login'
 import Product from './Pages/Product/Product'
 import { WishList } from './Pages/WishList/WishList'
 import Bag from "./Pages/Bag/Bag"
+import Otp from './Pages/Login/OTP/Otp'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route  path='/wishlist' exact element={<WishList/>} />
         {/* <Route  path='/bag' exact element={<Cart/>} /> */}
         <Route  path='/bag' exact element={<Bag/>} />
+        <Route  path='/login/otp' exact element={<Otp/>} />
       </Routes>
     </div>
   )
