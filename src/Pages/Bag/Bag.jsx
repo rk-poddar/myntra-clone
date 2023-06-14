@@ -73,7 +73,7 @@ const Bag = () => {
         <div className="logo">
           <Link to='/'>
             <img
-              src="https://cdn.freelogovectors.net/wp-content/uploads/2021/02/myntra-logo-freelogovectors.net_.png"
+              src="https://mumbaimirror.indiatimes.com/photo/80601325.cms"
               alt="Myntra"
               height="32px"
               width="40px"
