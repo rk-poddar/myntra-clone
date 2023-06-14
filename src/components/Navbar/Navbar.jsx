@@ -27,7 +27,7 @@ export const Navbar = () => {
 
     return (
         <header className="header">
-            <Link to="/" className="logo"><img src="https://gumlet.assettype.com/afaqs%2F2021-01%2F15f5f827-8e29-4520-af8d-a0f353b8da17%2Fimages.png?auto=format%2Ccompress&w=1200" alt="" /></Link>
+            <Link to="/" className="logo"><img src="https://mumbaimirror.indiatimes.com/photo/80601325.cms" alt="" /></Link>
             <nav>
                 <ul className="menu-items">
                     <li>
